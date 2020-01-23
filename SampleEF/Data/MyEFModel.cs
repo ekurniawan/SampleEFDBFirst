@@ -35,10 +35,10 @@ namespace SampleEF.Data
                 .Property(e => e.pengarang)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Kategori>()
-                .HasMany(e => e.Beritas)
-                .WithRequired(e => e.Kategori)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<Kategori>()
+            //    .HasMany(e => e.Beritas)
+            //    .WithRequired(e => e.Kategori)
+            //    .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Kota>()
                 .Property(e => e.NamaKota)
