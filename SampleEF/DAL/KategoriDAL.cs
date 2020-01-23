@@ -73,5 +73,19 @@ namespace SampleEF.DAL
                 throw new Exception("Data tidak ditemukan");
             }
         }
+
+        public void Delete(int id_kat)
+        {
+            var kategori = GetById(id_kat);
+            try
+            {
+                _db.Kategori.Remove(kategori);
+                _db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ObjectDataSource ID="odsKategori" TypeName="SampleEF.DAL.KategoriDAL"
-        SelectMethod="GetAll" UpdateMethod="Update" InsertMethod="Insert" runat="server">
+        SelectMethod="GetAll" DeleteMethod="Delete" UpdateMethod="Update" InsertMethod="Insert" runat="server">
         <InsertParameters>
             <asp:Parameter Name="nama_kat" Type="String" />
         </InsertParameters>
@@ -10,6 +10,9 @@
             <asp:Parameter Name="nama_kat" Type="String" />
             <asp:Parameter Name="id_kat" Type="Int32" />
         </UpdateParameters>
+        <DeleteParameters>
+            <asp:Parameter Name="id_kat" Type="Int32" />
+        </DeleteParameters>
     </asp:ObjectDataSource>
     <div class="row">
         <div class="col-md-6">
@@ -18,7 +21,7 @@
                 <Columns>
                     <asp:BoundField DataField="id_kat" HeaderText="ID" ReadOnly="true" SortExpression="id_kat" />
                     <asp:BoundField DataField="nama_kat" HeaderText="Nama Kategori" SortExpression="nama_kat" />
-                    <asp:CommandField ShowEditButton="True" ControlStyle-CssClass="btn btn-warning btn-sm" />
+                    <asp:CommandField ShowEditButton="True" ShowDeleteButton="true" ControlStyle-CssClass="btn btn-warning btn-sm" />
                 </Columns>
             </asp:GridView>
         </div>
