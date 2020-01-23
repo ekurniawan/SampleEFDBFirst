@@ -52,8 +52,9 @@ namespace SampleEF.DAL
         //update 
         public void Update(int id_kat,string nama_kat)
         {
-            var kategori = _db.Kategori.Where(k => k.id_kat == id_kat)
-                .SingleOrDefault();
+            //var kategori = _db.Kategori.Where(k => k.id_kat == id_kat)
+            //    .SingleOrDefault();
+            var kategori = GetById(id_kat);
 
             if (kategori != null)
             {

@@ -2,11 +2,24 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ObjectDataSource ID="odsKategori" TypeName="SampleEF.DAL.KategoriDAL"
-        SelectMethod="GetAll"  InsertMethod="Insert" runat="server" />
+        SelectMethod="GetAll" UpdateMethod="Update" InsertMethod="Insert" runat="server">
+        <InsertParameters>
+            <asp:Parameter Name="nama_kat" Type="String" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="nama_kat" Type="String" />
+            <asp:Parameter Name="id_kat" Type="Int32" />
+        </UpdateParameters>
+    </asp:ObjectDataSource>
     <div class="row">
         <div class="col-md-6">
-            <asp:GridView ID="gvKategori" CssClass="table table-bordered"
-                DataSourceID="odsKategori" runat="server">
+            <asp:GridView ID="gvKategori" CssClass="table table-bordered" DataKeyNames="id_kat"
+                DataSourceID="odsKategori" runat="server" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="id_kat" HeaderText="ID" ReadOnly="true" SortExpression="id_kat" />
+                    <asp:BoundField DataField="nama_kat" HeaderText="Nama Kategori" SortExpression="nama_kat" />
+                    <asp:CommandField ShowEditButton="True" ControlStyle-CssClass="btn btn-warning btn-sm" />
+                </Columns>
             </asp:GridView>
         </div>
         <div class="col-md-6">
