@@ -120,16 +120,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Data\MyModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MyModel.Context.cs</LastGenOutput>
-      <DependentUpon>MyModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Data\MyModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MyModel.edmx</DependentUpon>
-      <LastGenOutput>MyModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -142,13 +132,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <EntityDeploy Include="Data\MyModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MyModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Data\MyModel.edmx.diagram">
-      <DependentUpon>MyModel.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="KategoriPage.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -203,27 +186,11 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\KategoriDAL.cs" />
-    <Compile Include="Data\Berita.cs">
-      <DependentUpon>MyModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Kategori.cs">
-      <DependentUpon>MyModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\MyModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\MyModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\MyModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyModel.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Data\Berita.cs" />
+    <Compile Include="Data\Kategori.cs" />
+    <Compile Include="Data\Kota.cs" />
+    <Compile Include="Data\MyEFModel.cs" />
+    <Compile Include="Data\ViewBeritaWithKategori.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

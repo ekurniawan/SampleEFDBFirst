@@ -8,10 +8,10 @@ namespace SampleEF.DAL
 {
     public class KategoriDAL
     {
-        private SampleDbEntities _db;
+        private MyEFModel _db;
         public KategoriDAL()
         {
-            _db = new SampleDbEntities();
+            _db = new MyEFModel();
         }
 
         public IEnumerable<Kategori> GetAll()
