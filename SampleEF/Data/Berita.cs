@@ -29,6 +29,8 @@ namespace SampleEF.Data
         [StringLength(50)]
         public string pengarang { get; set; }
 
+        public int? tahun_terbit { get; set; }
+
         public virtual Kategori Kategori { get; set; }
     }
 }
