@@ -14,7 +14,7 @@ namespace SampleEF.DAL
             _db = new MyEFModel();
         }
 
-        public IEnumerable<Kategori> GetAll()
+        public IQueryable<Kategori> GetAll()
         {
             //var results = _db.Kategori.OrderBy(k=>k.nama_kat);
             var results = from k in _db.Kategori
