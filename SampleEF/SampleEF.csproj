@@ -263,6 +263,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Services\KategoriServices.cs" />
+    <Compile Include="Services\PostsService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
